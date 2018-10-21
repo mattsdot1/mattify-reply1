@@ -636,6 +636,7 @@ bot.on("message", function (message){
 				message.channel.send(embed);
 
 				break;
+				
 			case "memes":
 		  		var randmeme = randomeme();
 		  		var embed = new Discord.RichEmbed();
