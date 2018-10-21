@@ -536,11 +536,11 @@ bot.on("message", function (message){
 					mem.send("You have been muted by " + message.member.user.username + " because of " + reas);
 					message.channel.send("***User: " + mem.user.username + " has been muted!***");
 					message.delete();
-        				mem.addRole(Muted);
+        				mem.addRole(mut);
         			}
         		}else{
         			message.author.send("Muted by by: " + message.author);
-        			message.member.addRole(Muted);
+        			message.member.addRole(mut);
         		}
 			break;
 
@@ -564,7 +564,7 @@ bot.on("message", function (message){
 						mem.send("You have been unmuted by " + message.member.user.username + " because of " + reas);
 						message.channel.send("***User: " + mem.user.username + " has been unmuted!***");
 						message.delete();
-        					mem.removeRole(Muted);
+        					mem.removeRole(mut);
         				}
 				}
         	
