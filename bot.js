@@ -536,13 +536,11 @@ bot.on("message", function (message){
 					mem.send("You have been muted by " + message.member.user.username + " because of " + reas);
 					message.channel.send("***User: " + mem.user.username + " has been muted!***");
 					message.delete();
-				    	mem.removeRoles(mroles);
-        				mem.addRole(mut);
+        				mem.addRole(Muted);
         			}
         		}else{
         			message.author.send("Muted by by: " + message.author);
-        			message.member.removeRoles(message.member.roles);
-        			message.member.addRole(mut);
+        			message.member.addRole(Muted);
         		}
 			break;
 
@@ -552,7 +550,7 @@ bot.on("message", function (message){
 						message.channel.send("The correct syntax is ?unmute @member [reason]."); 
 						return;
 					}else{
-        					let mut = message.guild.roles.find("name","muted");
+        					let mut = message.guild.roles.find("name","Muted");
         					let mem = message.mentions.members.first();
         					let i = 2;
         					let reas ="";
@@ -566,8 +564,7 @@ bot.on("message", function (message){
 						mem.send("You have been unmuted by " + message.member.user.username + " because of " + reas);
 						message.channel.send("***User: " + mem.user.username + " has been unmuted!***");
 						message.delete();
-        					mem.removeRole(mut);
-        					mem.addRole(message.guild.roles.find("name",defrole));
+        					mem.removeRole(Muted);
         				}
 				}
         	
