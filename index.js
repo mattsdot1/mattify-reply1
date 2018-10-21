@@ -239,12 +239,11 @@ bot.on("message", function (message)
                     break;
 
                 case "say":
+		  if(message.member.permissions.has('SEND_MESSAGES')){			
                     if (args[1] == null)
                         message.channel.send("Hmmmm.... What should  I say???");
                     else
                     {
-						mod = message.member.roles.find("name","🛠Moderator🛠");
-						if(mod){
                         	var cot="";
                         	var a = 1;
                         	while (args[a] != null) { cot += args[a] + " "; a++; }
