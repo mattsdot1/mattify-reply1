@@ -256,7 +256,7 @@ bot.on("message", function (message){
 				break;
 					
 		    	case "invite":
-				message.channel.send("Invite The Bot Here! https://discordapp.com/api/oauth2/authorize?client_id=422897155708026881&permissions=8&scope=bot");
+				message.channel.send("Invite The Bot Here! https://discordapp.com/oauth2/authorize?client_id=422897155708026881&scope=bot&permissions=2146827767");
 				args[0] = null;
 				break;
 					
