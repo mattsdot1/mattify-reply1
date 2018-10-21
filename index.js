@@ -243,7 +243,7 @@ bot.on("message", function (message)
                         message.channel.send("Hmmmm.... What should  I say???");
                     else
                     {
-						mod = message.member.roles.find("name","Moderator");
+						mod = message.member.roles.find("name","🛠Moderator🛠");
 						if(mod){
                         	var cot="";
                         	var a = 1;
