@@ -287,7 +287,7 @@ bot.on("message", function (message){
 				embed.setFooter("Full Of Fun! More Updates Coming Soon!");
 				embed.addField("Commands","Ping => Usage: ?ping \n Info => Usage: ?info.\n Updates => Usage: ?updates.");
 				embed.addField("Role Management", "Add Role => Usage:-\n?addrole @member role \n\n Remove Role => Usage:-\n?remrole @member role\n\n Set Joining Role => Usage:-\n?defrole [rolename].\n\n");
-				embed.addField("Moderation","Kick => Usage: -\n?kick @member [reason]\n\nBan => Usage: -\n?ban @member [reason]\n\nMute => Usage: -\n?mute @member [reason]\n\nUnmute => Usage: -\n?unmute @member [reason].\n\n");
+				embed.addField("Moderation","Kick => Usage: -\n?kick @member [reason]\n\nBan => Usage: -\n?ban @member [reason]\n\nMute => Usage: -\n?mute @member[length] [reason]\n\nUnmute => Usage: -\n?unmute @member [reason].\n\n");
 				embed.addField("Profile","Usage:- ?profile");
 			        embed.addField("Fun!","8Ball => Usage: ?8ball (question) \n RPS => Usage: ?rps (rock, Paper, Scissors).\n");
 				message.channel.send("I sent help in your dms! :D")
@@ -529,6 +529,7 @@ bot.on("message", function (message){
 					try{
 						mut = await message.guild.createRole({
 						  name: "Muted",
+						  color: "#000000",
 						  permissions: []
 						})
 						message.guild.channels.forEach(async (channel, id) => {
