@@ -545,7 +545,7 @@ bot.on("message", function (message){
 				  mem.send("You have been muted by " + message.member.user.username + " because of " + reas + "for" + muttime);
 				  message.channel.send("***User: " + mem.user.username + " has been muted!***");
 				  message.delete();
-				  mem.addRole(mut);
+				  mem.addRole(mut.id);
 			
 				  setTimeout(function(){
 					mem.removeRole(mut.id);
