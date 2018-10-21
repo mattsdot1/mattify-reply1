@@ -299,8 +299,8 @@ bot.on("message", function (message)
 			   break;
 					
 				 case "remrole":
-				 if(message.member.permissions.has('MANAGE_ROLES')){
-					 if(args[2] == null)
+				   if(message.member.permissions.has('MANAGE_ROLES')){
+					   if(args[2] == null)
 					{
 						message.channel.send("The syntax is ?remrole @user role");
 					}
@@ -325,8 +325,8 @@ bot.on("message", function (message)
 					break;
 
       case "kick":
-      if(message.member.permissions.has("KICK_MEMBERS")){
-              if(args[1] == null)
+        if(message.member.permissions.has("KICK_MEMBERS")){
+                if(args[1] == null)
         	{message.channel.send("The correct syntax is ?kick @member [reason]."); return;}
         	else
         	{
@@ -353,8 +353,8 @@ bot.on("message", function (message)
         break;
 	  
 		case "defrole":
-		if(message.member.permissions.has('MANAGE_ROLES')){
-			if(args[1] == null)
+		  if(message.member.permissions.has('MANAGE_ROLES')){
+			  if(args[1] == null)
 			{
 				message.channel.send("Please specify a role!\n\nUsage:-\n\n ?defrole [rolename]")
 			}
@@ -381,8 +381,8 @@ bot.on("message", function (message)
 			break;
       
       case "ban":
-      if(message.member.permissions.has("BAN_MEMBERS")){
-              if(args[1] == null)
+        if(message.member.permissions.has("BAN_MEMBERS")){
+                if(args[1] == null)
         	{message.channel.send("The correct syntax is ?ban @member [reason]."); return;}
         	else
         	{
@@ -409,8 +409,8 @@ bot.on("message", function (message)
 		break;
 
 		case "mute":
-        if(message.member.permissions.has("MUTE_MEMBERS")){
-        	if(args[1] == null)
+                  if(message.member.permissions.has("MUTE_MEMBERS")){
+        	          if(args[1] == null)
         	{message.channel.send("The correct syntax is ?mute @member [reason]."); return;}
         	else
         	{
@@ -441,8 +441,8 @@ bot.on("message", function (message)
 		break;
 
 		case "unmute":
-        if(message.member.permissions.has("MUTE_MEMBERS")){
-        	if(args[1] == null)
+                  if(message.member.permissions.has("MUTE_MEMBERS")){
+        	          if(args[1] == null)
         	{message.channel.send("The correct syntax is ?unmute @member [reason]."); return;}
         	else
         	{
